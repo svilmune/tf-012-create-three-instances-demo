@@ -1,7 +1,5 @@
 # tf-012-create-three-instances-demo
 
-# tf-012-autoscaling-events-demo
-
 Creates demo stack with Oracle Cloud Infrastructure (OCI) using Terraform 0.12 which creates three instances using modules and dynamic blocks to reduce necessary amount of code.
 
 Running this creates following resources:
