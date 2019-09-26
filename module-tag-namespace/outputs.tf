@@ -1,0 +1,1 @@
+output "tag_namespace_id" { value = "${oci_identity_tag_namespace.CreateTagNamespace.id}" }
