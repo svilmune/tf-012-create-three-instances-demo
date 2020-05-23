@@ -136,6 +136,10 @@ variable "operating_system_version" {
   default = "7.6"
 } // OS Version
 
+variable "image_id" {
+  default = "Oracle-Linux-7.8-2020.04.17-0"
+} // OS Version
+
 variable "shape_name" {
   default = "VM.Standard2.1"
 } // Shape what to be used. Smallest shape selected by default
