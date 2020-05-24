@@ -21,13 +21,13 @@ variable "region" {}
 
 # Variables to create compartments for Demo
 
-variable "compartment_name" { default = "demo-three-instances" }
-variable "compartment_description" { default = "Compartment for demoing three instances" }
+variable "compartment_name" { default = "terraform-test-demo" }
+variable "compartment_description" { default = "Compartment for demoing two instances creation" }
 
 # Variables to create Tag Namespace
 
 variable "tags" {
-  type = "map"
+#  type = "map"
   default = {
     "DemoTagNamespace.Environment" = "poc"
     "DemoTagNamespace.Owner"       = "Me"
@@ -62,7 +62,7 @@ variable "ad_number" {
 }
 
 variable "compartment_display_name" {
-  default = "three-instances-poc"
+  default = "terraform-test-demo"
 }
 
 variable "vcn_ingress_protocol" {
@@ -133,7 +133,11 @@ variable "operating_system" {
 } // Name for the OS
 
 variable "operating_system_version" {
-  default = "7.6"
+  default = "7.8"
+} // OS Version
+
+variable "image_id" {
+  default = "Oracle-Linux-7.8-2020.04.17-0"
 } // OS Version
 
 variable "shape_name" {
@@ -153,7 +157,6 @@ variable "instance_variables" {
   default = {
     "ForEach1" = "fe-1"
     "ForEach2" = "fe-2"
-    "ForEach3" = "fe-3"
   }
 }
 variable "instance_create_vnic_details_hostname_label" {
@@ -165,7 +168,7 @@ variable "is_monitoring_disabled" {
 }
 
 variable "ssh_public_key" {
-  default = "EDIT ME TO BE REAL SSH KEY"
+  default = "ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEAheXJmKWb/glASWQIqBGGUw5BHJ+aKYOCI+kdwX49Yl0R5uMKYnRmFadrxFrk0IOWjCMRpI+CZqnzZ2DKufI/ZqtAEQwWmxx+RanO7IME8Je2Vv3pz6he4HjzA+0JnREeaskoPqbyVDq9nPsNkfbH7FlkOC2wDjYJuhGZZpWe22OuKTkZrFjoMGm5IMGiSiChoyEuQOLpQ0LF9cUc2ADc8dq88qPtZtnqduPfaM8uMO0KSWDr4yRkQiU/f2i/gfr1LHblpWKVPOT9a6qKjLDPcIQXiOBMeJZfJUcAYWvk1U/G/O9UlZ/MuB2h2nW/Jhmgz3bhBNKWiAZrKAU0B428Ww== rsa-key-20200523"
 }
 
 variable "instance_create_vnic_details_skip_source_dest_check" {
